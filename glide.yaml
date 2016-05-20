@@ -1,0 +1,9 @@
+package: github.com/t11e/go-titanclient
+import:
+- package: github.com/t11e/go-pebbleclient
+  version: master
+- package: github.com/t11e/go-discoveryclient
+  version: master
+- package: github.com/stretchr/testify
+  subpackages:
+  - assert
