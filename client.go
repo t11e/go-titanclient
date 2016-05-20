@@ -9,25 +9,29 @@ import (
 	pc "github.com/t11e/go-pebbleclient"
 )
 
-type Client struct {
+type Client interface {
+	Query(dataset string, query *discoveryclient.Query) (*discoveryclient.Results, error)
+}
+
+type client struct {
 	c pc.Client
 }
 
-func New(client pc.Client) (*Client, error) {
-	return &Client{client.Options(pc.Options{
+func New(pebbleClient pc.Client) (Client, error) {
+	return &client{pebbleClient.Options(pc.Options{
 		ServiceName: "titan",
 		ApiVersion:  1,
 	})}, nil
 }
 
-func (client *Client) Query(dataset string, query *discoveryclient.Query) (*discoveryclient.Results, error) {
+func (c *client) Query(dataset string, query *discoveryclient.Query) (*discoveryclient.Results, error) {
 	b, err := json.Marshal(query)
 	if err != nil {
 		return nil, errors.Wrap(err, "Could not marshal query")
 	}
 
 	var out discoveryclient.Results
-	err = client.c.Post("/query/:dataset", &pc.RequestOptions{
+	err = c.c.Post("/query/:dataset", &pc.RequestOptions{
 		Params: pc.Params{
 			"dataset": dataset,
 		},
