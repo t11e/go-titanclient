@@ -1,5 +1,5 @@
-hash: 1de7a450445a8d9d85be3cb0c714205ba7bdb73a42018c45e3420dd89aab10a8
-updated: 2016-05-20T16:05:48.335257176-04:00
+hash: c1655f1a1a6b738944cc0ba9fe6b11ea4ba603d8e15f171e8af301f63a1409e0
+updated: 2016-05-20T16:26:49.490970351-04:00
 imports:
 - name: github.com/ernesto-jimenez/httplogger
   version: 86cc44f6150a7e9dca8586e425a9c73e71f8ae7d
@@ -12,7 +12,7 @@ imports:
 - name: github.com/t11e/go-discoveryclient
   version: 632687f50ecad6fcf88d839d669a11008e65a541
 - name: github.com/t11e/go-pebbleclient
-  version: 76e81212c7fbfc06a538da87cdde1f36138c3379
+  version: bbeae253010047eafaf48c641dc10d26148b331c
 - name: golang.org/x/net
   version: 8a52c78636f6b7be1b1e5cb58b01a85f1e082659
   subpackages:
