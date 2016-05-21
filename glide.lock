@@ -1,5 +1,5 @@
-hash: c1655f1a1a6b738944cc0ba9fe6b11ea4ba603d8e15f171e8af301f63a1409e0
-updated: 2016-05-20T16:26:49.490970351-04:00
+hash: 53be8df33577c8201160c177edbe81c6ae85de826a8c032585adf92cac63b225
+updated: 2016-05-21T14:40:04.125227744-04:00
 imports:
 - name: github.com/ernesto-jimenez/httplogger
   version: 86cc44f6150a7e9dca8586e425a9c73e71f8ae7d
@@ -13,8 +13,10 @@ imports:
   version: 632687f50ecad6fcf88d839d669a11008e65a541
 - name: github.com/t11e/go-pebbleclient
   version: bbeae253010047eafaf48c641dc10d26148b331c
+- name: github.com/vektra/mockery
+  version: 3603a98efa82b3b34d74b22cc3c1a2f961e03b21
 - name: golang.org/x/net
-  version: 8a52c78636f6b7be1b1e5cb58b01a85f1e082659
+  version: 0c607074acd38c5f23d1344dfe74c977464d1257
   subpackages:
   - context
   - context/ctxhttp
