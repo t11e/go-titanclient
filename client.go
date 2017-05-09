@@ -29,7 +29,7 @@ func Register(connector *pc.Connector) {
 func New(pebbleClient pc.Client) (Client, error) {
 	return &client{pebbleClient.WithOptions(pc.Options{
 		ServiceName: "titan",
-		ApiVersion:  1,
+		APIVersion:  1,
 	})}, nil
 }
 
